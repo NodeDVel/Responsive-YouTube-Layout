@@ -3,8 +3,16 @@
   height: 100%;
 }
 
+#layoutHeader {
+  width: 100%;
+  height: 56px;
+}
+
 #header {
+  position: fixed;
+  z-index: 1;
   box-sizing: border-box;
+  width: 100%;
   padding: 0px 1rem;
   height: 56px;
   display: flex;
@@ -63,9 +71,10 @@
 #sideBar {
   height: 1200px;
   /* width: 15.3998678123%; */
-  width: 15rem; /* 240px */
+  width: 15rem;
   background-color: #ffffff;
   position: fixed;
+  top: 60px;
 }
 
 #sideBar > div {
@@ -461,15 +470,15 @@
   color: #909090;
 }
 
-/* ------------- */
 
 #spaceBoxLayout {
   display: flex;
+  box-sizing: border-box;
+  padding-top: 3%;
 }
 
 #spaceBox {
-  width: 240px;
-  /* width: 13.3928571429%; */
+  width: 274px;
   height: 100%;
   background-color: #F9F9F9;
 }
@@ -485,18 +494,17 @@
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  margin: 1% 5%;
+  margin: 1% 1% 1% 4%;
   height: 100%;
 }
 
 .videoLayout {
-  /* width: 368px; */
   width: 24.5%;
   position: relative;
+  cursor: pointer;
 }
 
 .videoLayout > img {
-  /* width: 368px; */
   width: 100%;
   margin-bottom: 4%;
 }
@@ -529,6 +537,7 @@
   top: 3%;
   right: 3%;
   text-align: center;
+  cursor: pointer;
 }
 
 
@@ -539,6 +548,7 @@
   top: 0;
   right: 100%;
   text-align: center;
+  cursor: pointer;
 }
 
 .middleHover3 {
@@ -548,6 +558,7 @@
   top: 0;
   right: 100%;
   text-align: center;
+  cursor: pointer;
 }
 
 .videoBoxLayout {
@@ -612,7 +623,7 @@
   }
 
   #mediaSideBarLayout > div:first-child {
-    color: reds;
+    color: red;
   }
         
   .mediaBoxLayout {

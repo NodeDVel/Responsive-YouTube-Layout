@@ -7,26 +7,30 @@
   <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/8259e7c9/img/favicon.ico">
   <link rel="stylesheet" href="youtube.css">
   <link rel="stylesheet" href="reset.css">
+  <script src="./jquery.min.js"></script>
 </head>
 <body>
   <div id="wrap">
-    <div id="header">
-      <div id="leftHeader">
-        <img src="img/icon.png" >
-        <img src="img/mainIcon.png">
-      </div>
-      <div id="searchHeader">
-        <input type="text" placeholder="검색">
-          <!-- <img src="img/iconMiddle.png"> -->
-        <div id="searchHeaderButton"><img src="img/Button.png" ></div>
-      </div>
-      <div id="rightHeader">
-        <img src="img/iconRight-1.png">
-        <img src="img/iconRight-2.png">
-        <img src="img/iconRight-3.png">
-        <img src="img/iconRight-4.png">
+    <div id="layoutHeader">
+      <div id="header">
+        <div id="leftHeader">
+          <img src="img/icon.png" >
+          <img src="img/mainIcon.png">
+        </div>
+        <div id="searchHeader">
+          <input type="text" placeholder="검색">
+            <!-- <img src="img/iconMiddle.png"> -->
+          <div id="searchHeaderButton"><img src="img/Button.png" ></div>
+        </div>
+        <div id="rightHeader">
+          <img src="img/iconRight-1.png">
+          <img src="img/iconRight-2.png">
+          <img src="img/iconRight-3.png">
+          <img src="img/iconRight-4.png">
+        </div>
       </div>
     </div>
+
       <div id="sideBar">
         <div id="mediaSideBarLayout"> 
           <div class="mediaBoxLayout">
@@ -743,12 +747,24 @@
                 </div>
               </div>
             </div>
-
-            
-            
           </div>
         </div>
       </div>
   </div>
+  <script>
+
+    $(document).ready(() => {
+     $(window).scroll(() => {
+      var scrollH = $(window).scrollTop() + $(window).height();
+      var documentH = $(document).height();
+      
+      if(scrollH == documentH){
+       for(var i = 0; i < 10; i++){
+       $('<div class="videoLayout"><img src="img/videoImg1.png"><div id="middleHover"><div><div class="ImgHover_1"><img src="img/videoImg2.png"><div class="middleHover2"><img src="img/videoImg4.png"></div></div><div class="ImgHover_2"><img src="img/videoImg3.png"><div class="middleHover3"><img src="img/videoImg5.png"></div></div></div></div><div class="videoBoxLayout"><img src="img/unnamed.jpg" ><div class="videoTextLayout"><span>노래방 인기차트 발라드 TOP 20 가사</span><br><span>낭소월드 <br> 조회수 11만회 - 1일전</span></div></div></div>').appendTo($(mainBarLayout)); 
+       }
+      }
+     });
+    });  
+  </script>
 </body>
 </html>
