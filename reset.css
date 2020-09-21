@@ -11,12 +11,6 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
   background:transparent;
 }
 
-/* body {
-  font-family: NanumGothic, 나눔고딕, 'Nanum Gothic', '맑은고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
-  background: url(../images/s_image/body_bg.png);
-  line-height: 1;
-} */
-
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
   display:block;
 }
@@ -43,17 +37,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-/* input {
-  margin: 0;
-  padding: 0;
-  box-sizing: content-box;
-  vertical-align: top;
-  appearance: none;
-  border: 1px solid #e65d5d;
-  border-radius: 0;
-  font-family: NanumGothic, 나눔고딕, 'Nanum Gothic', '맑은고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
-} */
 
 input::-moz-input-placeholder {
   color: gray;

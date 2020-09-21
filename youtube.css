@@ -45,13 +45,30 @@
   color: #111111;
   width: 85%;
   height: 28px;
-  border: 2px solid #cccccc;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  outline: none;
+}
+
+#searchHeader > input:focus {
+  box-shadow: 0 0 1px 1px blue;
 }
 
 #searchHeader > img {
   position: absolute;
-  top: 27%;
-  right: 16%;
+  top: 0.4375rem;
+  right: 4.375rem;
+}
+
+#searchHeader > div:nth-child(2) {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
 }
 
 #searchHeaderButton {
@@ -61,7 +78,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #ccc;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 #rightHeader {
@@ -72,12 +91,16 @@
 }
 
 #rightHeader > img {
-  margin-left: 11%;
+  margin-left: 27px;
+}
+
+#rightHeader img:first-child {
+  display: none;
 }
 
 #sideBar {
-  height: 1200px;
-  /* width: 15.3998678123%; */
+  height: calc(100% - 60px);
+  overflow: auto;
   width: 15rem;
   background-color: #ffffff;
   position: fixed;
@@ -89,9 +112,17 @@
 }
 
 #sideBarLayout {
-  overflow: scroll;
-  height: 930px;
   padding-bottom: 15px;
+}
+
+#sideBarLayout > div > div:hover {
+  cursor: pointer;
+  background-color: #e8e8e8;
+}
+
+#sideLayout_3 > div:first-child:hover, #sideLayout_4 > div:first-child:hover {
+  background-color: #ffffff;
+  cursor: auto;
 }
 
 #sideLayout_1 {
@@ -153,18 +184,16 @@
 #sideLayout_2 {
   width: 100%;
   height: 173px;
-  /* height: 120px; */
   margin-top: 10px;
   border-bottom: 1px solid #e8e8e8;
 }
 
-#sideLayout_2 > div {
+#sideLayout_2 > diiv {
   box-sizing: border-box;
 }
 
 #firstLayoutBox2_1 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -178,7 +207,6 @@
 
 #secondLayoutBox2_2 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -192,7 +220,6 @@
 
 #thirdLayoutBox2_3 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -250,7 +277,6 @@
 
 #secondLayoutBox3_2 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -264,7 +290,6 @@
 
 #thirdLayoutBox3_3 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -278,7 +303,6 @@
 
 #fourthLayout3_4 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -293,7 +317,6 @@
 #sideLayout_4 {
   width: 100%;
   height: 250px;
-  /* height: 120px; */
   margin-top: 10px;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -311,7 +334,6 @@
 
 #firstLayoutBox4_1 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -325,7 +347,6 @@
 
 #secondLayoutBox4_2 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -339,7 +360,6 @@
 
 #thirdLayoutBox4_3 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -353,7 +373,6 @@
 
 #fourthLayout4_4 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -404,7 +423,6 @@
 
 #secondLayoutBox5_2 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -418,7 +436,6 @@
 
 #thirdLayoutBox5_3 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -432,7 +449,6 @@
 
 #fourthLayout5_4 {
   width: 100%;
-  /* height: 30%; */
   height: 40px;
   padding: 0 24px;
   display: flex;
@@ -493,14 +509,15 @@
 
 #mainBarLayout {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-flow: row wrap;
-  margin: 1% 5% 1% 5%;
+  margin: 1% 4% 1% 5%;
   height: 100%;
 }
 
 .videoLayout {
   width: 24.5%;
+  margin-right: 5px;
   position: relative;
   cursor: pointer;
 }
@@ -595,7 +612,7 @@
 
 @media all and (max-width: 1500px) {
   .videoLayout {
-    width: 33%
+    width: 32%
   }
 }
 
@@ -636,13 +653,36 @@
   .mediaBoxLayout > img {
     margin-bottom: 20%;
   }
+
+  #mediaSideBarLayout > div:hover {
+    cursor: pointer;
+    background-color: #e8e8e8;
+  }
 }
 
 @media all and (max-width: 1000px) {
   #mainBarLayout {
-    margin: 1% 7% 1% 7%;
+    margin: 1% 6% 1% 7%;
   }
   .videoLayout {
-    width: 49.5%;
+    width: 49%;
   } 
+}
+
+@media all and (max-width: 650px) {
+  #searchHeader {
+    display: none;
+  }
+
+  #spaceBox {
+    display: none;
+  }
+
+  #mediaSideBarLayout {
+    display: none;
+  }
+
+  #rightHeader > img:first-child {
+    display: block;
+  }
 }
